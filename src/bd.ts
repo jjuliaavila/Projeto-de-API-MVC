@@ -17,7 +17,7 @@ export const posts: Post[] = [
     }
 ];
 
-let proximoIdUsuario = users.length > 0 ? Math.max(...users.map(u => u.id)) : 0;
+let proximoIdUsuario = users.length > 0 ? Math.max(...users.map(u => u.id)) : 0;   //verifica se existe pelo menos 1 usuario e pega todos os ids dos usuarios existentes 
 let proximoIdPost = posts.length > 0 ? Math.max(...posts.map(p => p.id)) : 0;
 
 export const obterProximoIdUsuario = (): number => {

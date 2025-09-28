@@ -6,7 +6,7 @@ export class PostData {
     adicionarPost = (novoPost: Post): void => {
         try {
             posts.push(novoPost);
-        } catch (erro: any) {
+        }catch (erro: any) {
             throw new Error(erro.message);
         }
     }
@@ -16,7 +16,7 @@ export class PostData {
         try {
             const indicePost = posts.findIndex(post => post.id === identificador);
             return indicePost;
-        } catch (erro: any) {
+        }catch (erro: any) {
             throw new Error(erro.message);
         }
     }
@@ -33,7 +33,7 @@ export class PostData {
     excluirPost = (posicao: number): void => {
         try {
             posts.splice(posicao, 1);
-        } catch (erro: any) {
+        }catch (erro: any) {
             throw new Error(erro.message);
         }
     }
@@ -42,7 +42,7 @@ export class PostData {
     obterTodosOsPosts = (): Post[] => {
         try {
             return [...posts]; 
-        } catch (erro: any) {
+        }catch (erro: any) {
             throw new Error(erro.message);
         }
     }

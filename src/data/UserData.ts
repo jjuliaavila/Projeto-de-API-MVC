@@ -47,7 +47,7 @@ export class UserData {
                 return usuario.age >= idadeInicial && usuario.age <= idadeFinal;
             });
             return usuariosFiltrados;
-        } catch (erro: any) {
+        }catch (erro: any) {
             throw new Error(erro.message);
         }
     }
@@ -65,7 +65,7 @@ export class UserData {
     modificarUsuario = (posicao: number, novosDados: User): void => {
         try {
             users[posicao] = novosDados;
-        } catch (erro: any) {
+        }catch (erro: any) {
             throw new Error(erro.message);
         }
     }

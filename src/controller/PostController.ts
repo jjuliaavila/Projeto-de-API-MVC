@@ -17,7 +17,7 @@ export class PostController {
                 data: postCriado
             };
             res.status(201).json(resposta);
-        } catch (erro: any) {
+        }catch (erro: any) {
             const resposta: ApiResponse = {
                 success: false,
                 message: erro.message
@@ -44,7 +44,7 @@ export class PostController {
                 message: mensagem
             };
             res.status(200).json(resposta);
-        } catch (erro: any) {
+        }catch (erro: any) {
             const resposta: ApiResponse = {
                 success: false,
                 message: erro.message
@@ -77,7 +77,7 @@ export class PostController {
                 message: mensagem
             };
             res.status(200).json(resposta);
-        } catch (erro: any) {
+        }catch (erro: any) {
             const resposta: ApiResponse = {
                 success: false,
                 message: erro.message

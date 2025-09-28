@@ -136,7 +136,7 @@ export class UserController {
                 message: "Usuario foi modificado com sucesso"
             };
             res.status(200).json(resposta);
-        } catch (erro: any) {
+        }catch (erro: any) {
             const resposta: ApiResponse = {
                 success: false,
                 message: erro.message
@@ -149,7 +149,7 @@ export class UserController {
 
     //exercicio 7 (exclui usuarios inativos)
     excluirInativos = async (req: Request, res: Response) => {
-        try {
+        try{
             const confirmacao = req.query.confirm === 'true';
 
             const usuariosRemovidos = this.userBusiness.removerUsuariosInativos(confirmacao);
